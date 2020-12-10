@@ -3,15 +3,17 @@
 // Сотрудники и кол-во выполненых задач содержатся как свойства объекта в формате "имя":"кол-во задач".
 
 const findBestEmployee = function (employees) {
-  const keys = Object.keys(employees);
-  let biggestSallary;
-  for (const key of keys) {
-    biggestSallary = employees[key];
-    if (biggestSallary > employees[key]) {
-      biggestSallary = employees[key];
+  let biggestValue = 0;
+  let mostProductive;
+  for (const key in employees) {
+    const value = employees[key];
+    if (value > biggestValue) {
+      biggestValue = value;
+      mostProductive = key;
     }
   }
-  return biggestSallary;
+
+  return mostProductive;
 };
 
 /*
