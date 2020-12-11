@@ -17,8 +17,6 @@ const getAllPropValues = function (arr, prop) {
     if (prop === "quantity") {
       valuesSet.push(product["quantity"]);
     }
-    if (prop === "category") {
-    }
   }
   return valuesSet;
 };
